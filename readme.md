@@ -99,4 +99,5 @@ start_response：一个由服务器提供的发送HTTP响应的函数，其第�
 - 其他：
   - `localhost:8888` 默认显示PWS正常运行信息
   - `localhost:8888/grand.html`调用一个手风琴样式的风景网页来演示静态资源请求
-  - `localhost:8888/index.py localhost:8888/center.py`调用一个股票收藏的页面来演示动态资源请求。
+  - `localhost:8888/index.html`也可实现静态资源请求，显示PWS正常运行页面
+  - `localhost:8888/index.py localhost:8888/center.py `调用一个股票收藏的页面来演示动态资源请求。

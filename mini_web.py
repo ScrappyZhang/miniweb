@@ -33,16 +33,6 @@ import os
 
 STATIC_ROOT = './static'  # 静态目录
 
-""""
-1.0 不管用户访问什么资源 都返回Helloxxxx
-2.0 根据用户访问资源路径 返回响应的数据
-3.0 基于多线程实现多任务的web服务器
-4.0 基于多进程实现多任务的web服务器
-5.0 基于面向对象实现
-6.0 协程实现
-7.0 使用命令行参数控制 服务器绑定的端口
-"""
-
 
 class HTTPServer(object):
     def __init__(self, port, app):

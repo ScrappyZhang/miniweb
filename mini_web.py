@@ -93,7 +93,7 @@ class HTTPServer(object):
             path_info = '/index.html'
         path_info = path_info.lstrip('/')
         env = {
-            "path": path_info
+            "PATH_INFO": path_info
         }
         # 判断浏览器请求的资源类型 动态 还是 静态
         # 如果是动态 走动态处理的流程。这里假设.py结尾的均对应为后台app生成的动态资源

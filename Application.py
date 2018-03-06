@@ -31,6 +31,7 @@ template_root = "./templates"
 
 
 def index(file_name):
+    # 业务逻辑处理/index.py
     file_name = file_name.replace(".py", ".html")
     # file_name = file_name.lstrip('/')
     file = os.path.join(template_root, file_name)
@@ -44,6 +45,7 @@ def index(file_name):
 
 
 def center(file_name):
+    # 业务逻辑处理/center.py
     file_name = file_name.replace(".py", ".html")
     # file_name = file_name.lstrip('/')
     # print(file_name)
@@ -58,8 +60,9 @@ def center(file_name):
 
 
 def app(environ, start_response):
-    if environ['path'].endswith('.py'):
-        file_name = environ['path']
+    # 在开发中无论别的模块数据如何，一般都需在采用到本模块前进行数据校验，查看是否有效，以防出错等问题。
+    if environ['PATH_INFO'].endswith('.py'):
+        file_name = environ['PATH_INFO']
         print(file_name)
         status = '200 OK'
         response_headers = [('Content-Type', 'text/html'), ('Content-Type', 'text/html;charset=utf-8')]
